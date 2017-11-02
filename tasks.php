@@ -1,28 +1,75 @@
 <!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+
+	<style>
+		table, th, td {
+		    border: 1px solid black;
+		    border-collapse: collapse;
+		}
+		.color {
+			color: green;
+		}
+	</style>
+
+<script type="text/javascript">
+
+	function Color($status) {
+	    if ($status == "0")
+	        return 'green';
+	    else
+	        return = 'red';
+
+	}
+</script>
+
+</head>
 <html>
 <body>
 
 <?php
 
+header("Content-Type: text/html; charset=UTF-8");
+
 include 'connect.php';
 
-$sql = "SELECT * FROM task";
+$sql = "SELECT * FROM tasks";
 $result = $conn->query($sql);
 
+	echo 	'<h1> Tasks: </h1>
+			<table style="width:100%">
+					  <tr>
+					    <th>Nome</th>
+					    <th>Descrição</th> 
+					    <th>Prioridade</th>
+					    <th>Status</th>
+					    <th>Criado Por:</th>
+					  </tr>';
 if ($result->num_rows > 0) {
-    // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<br> id: ". $row["id"]. " - Name: ". $row["name"]. " " . $row["description"] . "" . $row["priority"] . "<br>";
-    }
+    	if ($row["state"] == '0')
+    		$status = "<font color='red'>Undone</font>";
+    	else
+    		$status = "<font color='green'>Done</font>";
+		echo 	'<tr>
+					    <td>' . $row["name"] . '</td>
+					    <td>' . $row["description"] . '</td>
+					    <td>' . $row["priority"] . '</td>
+					    <td color:>' . $status . '</td>
+					    <td>' . $row["user"] . '</td>
+				</tr>';
+	}
 } else {
-    echo "0 results";
+	echo "0 results";
 }
+
+echo '</table>';
 
 $conn->close();
 ?> 
 
 <br>
-<a href="new_task.php"> <input type="submit" name="submit" value="Submit"> </a>
+<a href="new_task.php"> <input type="submit" name="submit" value="Criar Task"> </a>
 
 </body>
 </html>
