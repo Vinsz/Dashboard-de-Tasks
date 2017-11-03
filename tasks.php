@@ -56,10 +56,14 @@ if ($result->num_rows > 0) {
 echo '</table>';
 
 $conn->close();
+
 ?> 
 
 <br>
 <a href="new_task.php"> <input type="submit" name="submit" value="Criar Task"> </a>
+
+<br><br>
+<br/><a href="logout.php">Desconectar</a>
 
 </body>
 </html>
