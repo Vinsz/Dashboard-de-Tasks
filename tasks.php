@@ -58,7 +58,7 @@ if ($result->num_rows > 0) {
 					    <td color:>' . $status . '</td>
 					    <td>' . $row["user"] . '</td>
 					    <td><a href="delete.php?id=' . $row["id"] . '"> excluir </a></td>
-					    <td><a href="edit.php"> editar </a></td>
+					    <td><a href="edit.php?id=' . $row["id"] . '"> editar </a></td>
 				</tr>';
 	}					    
 } else {
