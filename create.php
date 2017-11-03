@@ -20,9 +20,7 @@
 
 	$sql = "INSERT INTO tasks (name, description, priority, state, attach) VALUES ('".$_POST["name"]."','".$_POST["description"]."','".$_POST["priority"]."','".$_POST["status"]."', '".$total_arquivos."');";
 
-	$last_id = mysqli_insert_id($conn);
-
-	$sql .= "INSERT INTO attachment (name, id_task) VALUES ('".$_FILES['name']."','".$last_id."')";
+	$sql .= "INSERT INTO attachments (id_task, name) VALUES (last_insert_id(), '".$arquivo_upload."')";
 
 	if ($conn->multi_query($sql) === TRUE) {
     	echo "New record created successfully";

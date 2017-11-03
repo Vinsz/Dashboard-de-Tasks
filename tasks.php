@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
     	else
     		$status = "<font color='green'>Done</font>";
 		echo 	'<tr>
-					    <td>' . $row["name"] . '</td>
+					    <td><a href="task_view.php?id=' . $row["id"] . '">' . $row["name"] . '</a></td>
 					    <td>' . $row["description"] . '</td>
 					    <td>' . $row["priority"] . '</td>
 					    <td color:>' . $status . '</td>
