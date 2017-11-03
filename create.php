@@ -12,4 +12,4 @@
 	$conn->close();
 ?>
 <br>
-<a href="tasks.php">Voltar</a>;
+<a href="tasks.php">Voltar</a>

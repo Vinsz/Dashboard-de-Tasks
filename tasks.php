@@ -29,8 +29,6 @@
 
 <?php
 
-header("Content-Type: text/html; charset=UTF-8");
-
 include 'connect.php';
 
 $sql = "SELECT * FROM tasks";
@@ -44,6 +42,8 @@ $result = $conn->query($sql);
 					    <th>Prioridade</th>
 					    <th>Status</th>
 					    <th>Criado Por:</th>
+					    <th></th>
+					    <th></th>
 					  </tr>';
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
@@ -57,8 +57,10 @@ if ($result->num_rows > 0) {
 					    <td>' . $row["priority"] . '</td>
 					    <td color:>' . $status . '</td>
 					    <td>' . $row["user"] . '</td>
+					    <td><a href="delete.php?id=' . $row["id"] . '"> excluir </a></td>
+					    <td><a href="edit.php"> editar </a></td>
 				</tr>';
-	}
+	}					    
 } else {
 	echo "0 results";
 }
