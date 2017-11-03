@@ -10,6 +10,5 @@
   }
 
   $conn->close();
+  header("Refresh:0; url=tasks.php");
 ?>
-<br>
-<a href="tasks.php">Voltar</a>

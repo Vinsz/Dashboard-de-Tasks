@@ -4,6 +4,30 @@
 <style>
 .error {color: #FF0000;}
 </style>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
+    <script src="./js/plugins/sortable.min.js" type="text/javascript"></script>
+    <script src="./js/plugins/purify.min.js" type="text/javascript"></script>
+    <script src="./js/fileinput.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./themes/fa/theme.js"></script>
+    <script src="./js/locales/<lang>.js"></script>
+    
+<script type="text/javascript">
+  $(document).ready( function() {
+      
+  // initialize with defaults
+  $("#arquivos").fileinput();
+
+  // with plugin options
+   $("#arquivos").fileinput({'showUpload':false, 'previewFileType':'any'});
+        
+  });
+</script>
+
 </head>
 <body>  
 
@@ -47,10 +71,10 @@ function test_input($data) {
 }
 
 ?>
-
+<div class="container">
 <h2>Nova Task</h2>
 <p><span class="error">* required field.</span></p>
-<form method="post" action="create.php" >  
+<form method="post" action="create.php" enctype="multipart/form-data" >  
   Nome: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
@@ -69,8 +93,13 @@ function test_input($data) {
   <input type="radio" name= "status" <?php if (isset($status) && $status==1) ;?> value="1"> Done
   <span class="error">* <!-- <?php //echo $statusErr;?>--> </span> 
   <br><br> 
+   <label class="control-label">Selecione os arquivos desejados:</label>
+        <input id="arquivos" name="arquivos[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true">
   <input type="submit" name="submit" value="Submit">  
 </form> 
+<br>
+       
+    </div>
 
 </body>
 </html>

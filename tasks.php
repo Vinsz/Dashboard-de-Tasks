@@ -7,21 +7,7 @@
 		    border: 1px solid black;
 		    border-collapse: collapse;
 		}
-		.color {
-			color: green;
-		}
 	</style>
-
-<script type="text/javascript">
-
-	function Color($status) {
-	    if ($status == "0")
-	        return 'green';
-	    else
-	        return = 'red';
-
-	}
-</script>
 
 </head>
 <html>
@@ -42,6 +28,7 @@ $result = $conn->query($sql);
 					    <th>Prioridade</th>
 					    <th>Status</th>
 					    <th>Criado Por:</th>
+					    <th>Número de Anexos</th>
 					    <th></th>
 					    <th></th>
 					  </tr>';
@@ -57,6 +44,7 @@ if ($result->num_rows > 0) {
 					    <td>' . $row["priority"] . '</td>
 					    <td color:>' . $status . '</td>
 					    <td>' . $row["user"] . '</td>
+					    <td>' . $row["attach"] . '</td>
 					    <td><a href="delete.php?id=' . $row["id"] . '"> excluir </a></td>
 					    <td><a href="edit.php?id=' . $row["id"] . '"> editar </a></td>
 				</tr>';
