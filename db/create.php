@@ -20,7 +20,11 @@
 	//diretório de upload
 	$diretorio_upload = '../uploads/';
 
-	$sql = "INSERT INTO tasks (name, description, priority, state, attach, user) VALUES ('".$_POST["name"]."','".$_POST["description"]."','".$_POST["priority"]."','".$_POST["status"]."', '".$total_arquivos."', '".$session["email"]."');";
+	if ($_POST["status"]=="1") {
+		$sql = "INSERT INTO tasks (name, description, priority, state, attach, user, done) VALUES ('".$_POST["name"]."','".$_POST["description"]."','".$_POST["priority"]."','".$_POST["status"]."', '".$total_arquivos."', '".$session["email"]."', '".$session["email"]."');";
+	} else {
+		$sql = "INSERT INTO tasks (name, description, priority, state, attach, user) VALUES ('".$_POST["name"]."','".$_POST["description"]."','".$_POST["priority"]."','".$_POST["status"]."', '".$total_arquivos."', '".$session["email"]."');";
+	}	
 
 	$sql .= "SET @last = last_insert_id();";
 
