@@ -7,19 +7,21 @@
   <br><br>6. Pronto, o projeto está rodando e as interações podem ser testadas.
   
   <br><br><br>
+    O projeto inteiro, dentro das 72 horas disponíveis levou 40 horas. As horas não foram muito bem contabilizadas. E não seria possível utilizar todas as 72 horas devido a compromissos.
+    <br>
   ## Parte 1: CRUD
-  O projeto inteiro, dentro das 72 horas disponíveis levou 40 horas. As horas não foram muito bem contabilizadas. E não seria possível utilizar todas as 72 horas devido a compromissos.
-  <br>Esta primeira parte do projeto levou por volta de 4 horas, 
-  
+ Esta primeira parte do projeto levou por volta de 10 horas, pois ela basicamente foi alterada durante todo o projeto, já que nas outras partes aparecem novas condições, novos dados que necessitam de alterações no CRUD e no banco de dados.
   
   <br><br><br>
   ## Parte 2: Login Autenticado com Google
   
-  <br><br><br>
-  ## Parte 3: CRUD
   
   <br><br><br>
-  ## Parte 4: CRUD
+  ## Parte 3: Tasks Mais Complexas
+  
+  <br><br><br>
+  ## Parte 4: Tasks Completas
 
 <br><br><br>
-  ## Parte 5: CRUD
+  ## Parte 5: Suporte Robusto para Anexos + Busca
+   Essa parte não foi desenvolvida devido a falta de tempo que me ocorreu.
