@@ -1,4 +1,5 @@
-# Dashboard-de-Tasks
+#Dashboard de Tasks
+## Instruções para uso
    1. O projeto deve ser rodado localmente com xampp.
   <br><br>2. Clone o projeto na pasta htdocs do xampp em sua máquina.
   <br><br>3. Para que o login do Google funcione corretamente o caminho de pastas deve ser .../htdocs/Dashboard-de-Tasks. Assim a url de acesso será http://localhost/Dashboard-de-Tasks e estará habilitado o acesso na API do Google.
@@ -6,7 +7,8 @@
   <br><br>5. Agora acesse http://localhost/Dashboard-de-Tasks, faça o seu login com o Google e vá para o Dashboard de Tasks.
   <br><br>6. Pronto, o projeto está rodando e as interações podem ser testadas.
   
-  <br><br><br>
+  <br><br>
+  #Desenvolvimento do Dashboard
     O projeto inteiro, dentro das 72 horas disponíveis levou 40 horas. As horas não foram muito bem contabilizadas. E não seria possível utilizar todas as 72 horas devido a compromissos.
     <br>
   ## Parte 1: CRUD
