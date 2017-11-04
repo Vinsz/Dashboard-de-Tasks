@@ -36,9 +36,10 @@ $sql = "SELECT * FROM attachments WHERE id_task = '".$_GET["id"]."'";
 
 $result = $conn->query($sql);
 
+	echo '<br>Anexo(s): ';
 if ($result->num_rows > 0) {
     while($row= $result->fetch_assoc()) {
-		echo 	'<br>Anexo(s): <a href="download.php?name=' . $row["name"] .'">'. $row["name"] .' </a>';
+		echo '<br><a href="download.php?name=' . $row["name"] .'">'. $row["name"] .' </a>';
 	}
 } else {
 	echo "<br>0 results";
@@ -46,6 +47,7 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?> 
+<br><br><br><a href="tasks.php">Voltar para o Dashboard!</a>
 </body>
 </html>
 

@@ -2,12 +2,24 @@
 <head>
 	<meta charset="utf-8" />
 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
+    <script src="./js/plugins/sortable.min.js" type="text/javascript"></script>
+    <script src="./js/plugins/purify.min.js" type="text/javascript"></script>
+    <script src="./js/fileinput.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./themes/fa/theme.js"></script>
+    <script src="./js/locales/<lang>.js"></script>
+
 	<style>
 		table, th, td {
 		    border: 1px solid black;
 		    border-collapse: collapse;
 		}
 	</style>
+
 
 </head>
 <html>
@@ -60,10 +72,10 @@ $conn->close();
 ?> 
 
 <br>
-<a href="new_task.php"> <input type="submit" name="submit" value="Criar Task"> </a>
+<a href="new_task.php"> <button class="btn btn-primary">Criar Task</button></a>
 
 <br><br>
-<br/><a href="logout.php">Desconectar</a>
+<a href="logout.php"> <button class="btn btn-primary">Desconectar</button></a>
 
 </body>
 </html>

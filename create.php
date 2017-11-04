@@ -22,14 +22,14 @@
 		$arquivo_upload = $diretorio_upload . basename($_FILES['arquivos']['name'][$i]);
 		if (move_uploaded_file($_FILES['arquivos']['tmp_name'][$i], $arquivo_upload)) {
 			$sql .= "INSERT INTO attachments (id_task, name) VALUES (@last, '".basename($_FILES['arquivos']['name'][$i])."');";
-			echo "Sucesso<br />";
+			
 		} else {
 			echo "Erro<br />";
 		}
 	}
 
 	if ($conn->multi_query($sql) === TRUE) {
-    	echo "New record created successfully";
+    	
 	} else {
     	echo "Error: " . $sql . "<br>" . $conn->error;
 	}
