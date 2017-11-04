@@ -1,7 +1,12 @@
 <?php
+
+	session_start();
+
+	$session = $_SESSION['userData'] ;
+	$session["email"];
   include 'connect.php';
 
-  $sql = "DELETE FROM tasks WHERE id = '".$_GET["id"]."'";
+  $sql = "UPDATE tasks SET state = 1, done = '".$session["email"]."' WHERE id = '".$_GET["id"]."'";
 
   if ($conn->query($sql) === TRUE) {
       
@@ -10,5 +15,6 @@
   }
 
   $conn->close();
+
   header("Refresh:0; url=tasks.php");
 ?>

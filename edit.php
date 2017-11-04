@@ -79,7 +79,7 @@ if ($result->num_rows > 0) {
         if ($result->num_rows > 0) {
             while($row= $result->fetch_assoc()) {
             echo '<br><a href="download.php?name=' .$row["name"].'">'.$row["name"].' </a>
-                  <a href="delete_file.php?name='.$row["name"].'&id='.$row["id"].'&id_task='.$row["id_task"].'"><button type="button" class="close">&times;</button> </a>';
+                  <a href="delete_file.php?name='.$row["name"].'&id='.$row["id"].'&id_task='.$row["id_task"].'"><span class="glyphicon glyphicon-remove"></span></a>';
           }
         } else {
           echo "<br>Sem arquivos anexos.";
