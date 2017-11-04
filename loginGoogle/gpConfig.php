@@ -10,7 +10,7 @@ include_once 'src/contrib/Google_Oauth2Service.php';
  */
 $clientId = '548436634031-nm7b31sks6202kpf3ota4ad7namgnkt6.apps.googleusercontent.com';
 $clientSecret = '8bSLlDjfntWWC9Wemm2g-ceF';
-$redirectURL = 'http://localhost/Tasks/';
+$redirectURL = 'http://localhost/Dashboard-de-Tasks/';
 
 //Call Google API
 $gClient = new Google_Client();
