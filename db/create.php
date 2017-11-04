@@ -6,6 +6,10 @@
 
 	include 'connect.php';
 
+	if (!file_exists('../uploads')) {
+		mkdir('../uploads', 0777, true);
+	}
+
 	//verifica quantos arquivos estão sendo recebidos na superglobal $)FILES
 	$total_arquivos = count($_FILES['arquivos']['name']);
 	
