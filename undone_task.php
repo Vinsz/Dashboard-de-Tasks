@@ -1,7 +1,12 @@
 <?php
+
+	session_start();
+
+	$session = $_SESSION['userData'] ;
+	$session["email"];
   include 'connect.php';
 
-  $sql = "UPDATE tasks SET name = '".$_POST["name"] . "',  description = '".$_POST["description"] . "', priority = '".$_POST["priority"] . "' WHERE id = '".$_POST["id"]."'";
+  $sql = "UPDATE tasks SET state = 0, done = '' WHERE id = '".$_GET["id"]."'";
 
   if ($conn->query($sql) === TRUE) {
       

@@ -62,13 +62,6 @@ if ($result->num_rows > 0) {
         </label>
       </div>
 
-      <div class="form-check form-check-inline">
-        <label class="form-check-label"> Status 
-          <span class="error">* </span> <br>
-          <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="0" <?php echo "checked"; ?> required> Undone
-          <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="1" <?php echo "checked"; ?> required> Done
-        </label>
-      </div>
       <label class="control-label">Arquivos Anexados:</label>
       <?php
         $sql = "SELECT * FROM attachments WHERE id_task = '".$_GET["id"]."'";
@@ -78,7 +71,7 @@ if ($result->num_rows > 0) {
           echo '<br>Anexo(s): ';
         if ($result->num_rows > 0) {
             while($row= $result->fetch_assoc()) {
-            echo '<br><a href="download.php?name=' .$row["name"].'">'.$row["name"].' </a>
+            echo '<br>'.$row["name"].' <a href="download.php?name=' .$row["name"].'"><span class="glyphicon glyphicon-save-file"></a>
                   <a href="delete_file.php?name='.$row["name"].'&id='.$row["id"].'&id_task='.$row["id_task"].'"><span class="glyphicon glyphicon-remove"></span></a>';
           }
         } else {

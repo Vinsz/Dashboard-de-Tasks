@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
+    <script src="./js/plugins/sortable.min.js" type="text/javascript"></script>
+    <script src="./js/plugins/purify.min.js" type="text/javascript"></script>
+    <script src="./js/fileinput.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./themes/fa/theme.js"></script>
+    <script src="./js/locales/<lang>.js"></script>
+</head>
+<html>
+<body>    
+
 <?php
 //Include GP config file && User class
 include_once 'gpConfig.php';
@@ -39,17 +57,17 @@ if ($gClient->getAccessToken()) {
     
     //Render facebook profile data
     if(!empty($userData)){
-        $output = '<h1>Google+ Profile Details </h1>';
-        $output .= '<img src="'.$userData['picture'].'" width="300" height="220">';
-        $output .= '<br/>Google ID : ' . $userData['oauth_uid'];
-        $output .= '<br/>Name : ' . $userData['first_name'].' '.$userData['last_name'];
-        $output .= '<br/>Email : ' . $userData['email'];
-        $output .= '<br/>Gender : ' . $userData['gender'];
-        $output .= '<br/>Locale : ' . $userData['locale'];
-        $output .= '<br/>Logged in with : Google';
+        $output = '<div class="container"><h1>Google+ Profile Details </h1>';
+        $output .= '<img src="'.$userData['picture'].'" width="150" height="150">';
+        $output .= '<br/><label class="form-check-label" >Google ID :</label> ' . $userData['oauth_uid'];
+        $output .= '<br/><label class="form-check-label" >Name : </label>' . $userData['first_name'].' '.$userData['last_name'];
+        $output .= '<br/><label class="form-check-label" >Email : </label>' . $userData['email'];
+        $output .= '<br/><label class="form-check-label" >Gender : </label>' . $userData['gender'];
+        $output .= '<br/><label class="form-check-label" >Locale : </label>' . $userData['locale'];
+        $output .= '<br/><label class="form-check-label" >Logged in with : </label>Google';
         $output .= '<br/><a href="'.$userData['link'].'" target="_blank">Click to Visit Google+ Page</a>';
         $output .= '<br/>Logout from <a href="logout.php">Google</a>'; 
-        $output .= '<br><br><br><a href="tasks.php"> Ir para Dashboard de Tasks!</a>'; 
+        $output .= '<br><br><br><a href="tasks.php"><button class="btn btn-primary"> Ir para Dashboard de Tasks!</button></a>'; 
     }else{
         $output = '<h3 style="color:red">Some problem occurred, please try again.</h3>';
     }
@@ -60,3 +78,5 @@ if ($gClient->getAccessToken()) {
 ?>
 
 <div><?php echo $output; ?></div>
+</body>
+</html>

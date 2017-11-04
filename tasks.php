@@ -18,6 +18,17 @@
 		    border: 1px solid black;
 		    border-collapse: collapse;
 		}
+
+				.table td.text {
+		    max-width: 177px;
+		}
+		.table td.text span {
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    display: inline-block;
+		    max-width: 100%;
+		}
 	</style>
 
 
@@ -46,20 +57,24 @@ echo '<h1> Tasks: </h1>
 			    <th scope="col">Finalizada Por</th>
 			    <th scope="col">Excluir</th>
 			    <th scope="col">Editar</th>
+			    <th scope="col">Finalizar Task</th>
 		    </tr>
 		</thead>';
 
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
-		if ($row["state"] == '0')
-			$status = "<font color='red'>Undone </font><a href='update_task.php?id=".$row["id"]."'><span class='glyphicon glyphicon-ok'></span></a>";
-		else
+		if ($row["state"] == '0') {
+			$status = "<font color='red'>Undone </font>";
+			$done = "<a href='done_task.php?id=".$row["id"]."'><span class='glyphicon glyphicon-ok'></span></a>";
+		} else {
 			$status = "<font color='green'>Done</font>";
+			$done = "<a href='undone_task.php?id=".$row["id"]."'><span class='glyphicon glyphicon-minus'></span></a>";
+		}
 
 echo '<tbody>
 		<tr>
 			<td><a href="task_view.php?id=' . $row["id"] . '">' . $row["name"] . ' <span class="glyphicon glyphicon-eye-open"></span></a></td>
-			<td>' . $row["description"] . '</td>
+			<td class="text"><span>' . $row["description"] . '</span></td>
 		    <td>' . $row["priority"] . '</td>
 		    <td color:>' . $status . '</td>
 		    <td>' . $row["user"] . '</td>
@@ -67,6 +82,7 @@ echo '<tbody>
 			<td>' . $row["done"] . '</td>
 			<td><a href="delete.php?id=' . $row["id"] . '"> <span class="glyphicon glyphicon-remove"></span> </a></td>
 			<td><a href="edit.php?id=' . $row["id"] . '"> <span class="glyphicon glyphicon-edit"></span> </a></td>
+			<td>'.$done.'</td>
 		</tr>
 	  </tbody>';
 	}
