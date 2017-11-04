@@ -9,7 +9,7 @@
   
   <br><br>
   # Desenvolvimento do Dashboard
-   <br>O projeto inteiro, dentro das 72 horas disponíveis levou 40 horas. As horas não foram muito bem contabilizadas, já que não fiz o projeto parte a parte separadamente, pois eu li todo o projeto antes e fui desenvolvendo conforme a necessidade. E não seria possível utilizar todas as 72 horas devido a compromissos.
+   O projeto inteiro, dentro das 72 horas disponíveis levou 40 horas. As horas não foram muito bem contabilizadas, já que não fiz o projeto parte a parte separadamente, pois eu li todo o projeto antes e fui desenvolvendo conforme a necessidade. E não seria possível utilizar todas as 72 horas devido a compromissos.
     <br>A soma das horas das partes não bateram com 40 horas, pois também usei parte desse tempo para instalação de programas, para fazer este arquivo, para utilizar o Github, para desenvolvimento da interface com bootstrap etc.
     <br>
     
