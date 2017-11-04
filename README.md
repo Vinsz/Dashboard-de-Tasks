@@ -7,11 +7,12 @@
   <br><br>5. Agora acesse http://localhost/Dashboard-de-Tasks, faça o seu login com o Google e vá para o Dashboard de Tasks.
   <br><br>6. Pronto, o projeto está rodando e as interações podem ser testadas.
   
-  <br><br>
+  <br>
   # Desenvolvimento do Dashboard
-    O projeto inteiro, dentro das 72 horas disponíveis levou 40 horas. As horas não foram muito bem contabilizadas, já que não fiz o projeto parte a parte separadamente, pois eu li todo o projeto antes e fui desenvolvendo conforme a necessidade. E não seria possível utilizar todas as 72 horas devido a compromissos.
+   O projeto inteiro, dentro das 72 horas disponíveis levou 40 horas. As horas não foram muito bem contabilizadas, já que não fiz o projeto parte a parte separadamente, pois eu li todo o projeto antes e fui desenvolvendo conforme a necessidade. E não seria possível utilizar todas as 72 horas devido a compromissos.
     <br>A soma das horas das partes não bateram com 40 horas, pois também usei parte desse tempo para instalação de programas, para fazer este arquivo, para utilizar o Github, para desenvolvimento da interface com bootstrap etc.
     <br>
+    
   ## Parte 1: CRUD
   Esta primeira parte do projeto levou por volta de 30 horas, pois ela basicamente foi alterada durante todo o projeto, já que nas outras partes aparecem novas condições, novos dados que necessitam de alterações no CRUD e no banco de dados.
   <br>As dificuldades enfrentadas nessa parte não são muito grandes, obviamente sempre temos erros de sintaxe, grafia e algum acesso ao banco de dados que acabam por atrasar o tempo de desenvolvimento.
