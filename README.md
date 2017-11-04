@@ -1,4 +1,4 @@
-#Dashboard de Tasks
+# Dashboard de Tasks
 ## Instruções para uso
    1. O projeto deve ser rodado localmente com xampp.
   <br><br>2. Clone o projeto na pasta htdocs do xampp em sua máquina.
@@ -8,22 +8,28 @@
   <br><br>6. Pronto, o projeto está rodando e as interações podem ser testadas.
   
   <br><br>
-  #Desenvolvimento do Dashboard
-    O projeto inteiro, dentro das 72 horas disponíveis levou 40 horas. As horas não foram muito bem contabilizadas. E não seria possível utilizar todas as 72 horas devido a compromissos.
+  # Desenvolvimento do Dashboard
+    O projeto inteiro, dentro das 72 horas disponíveis levou 40 horas. As horas não foram muito bem contabilizadas, já que não fiz o projeto parte a parte separadamente, pois eu li todo o projeto antes e fui desenvolvendo conforme a necessidade. E não seria possível utilizar todas as 72 horas devido a compromissos. A soma das horas das partes não bateram com 40 horas, pois também usei parte desse tempo para instalação de programas, para fazer este arquivo, para utilizar o Github, para desenvolvimento da interface com bootstrap etc.
     <br>
   ## Parte 1: CRUD
- Esta primeira parte do projeto levou por volta de 10 horas, pois ela basicamente foi alterada durante todo o projeto, já que nas outras partes aparecem novas condições, novos dados que necessitam de alterações no CRUD e no banco de dados.
+  Esta primeira parte do projeto levou por volta de 30 horas, pois ela basicamente foi alterada durante todo o projeto, já que nas outras partes aparecem novas condições, novos dados que necessitam de alterações no CRUD e no banco de dados.
+  <br>As dificuldades enfrentadas nessa parte não são muito grandes, obviamente sempre temos erros de sintaxe, grafia e algum acesso ao banco de dados que acabam por atrasar o tempo de desenvolvimento.
   
-  <br><br><br>
+  <br>
   ## Parte 2: Login Autenticado com Google
+  A segunda parte do projeto levou por volta de 4 horas, pois nunca havia feito um login autenticado com o google.
+  <br>O login do Google não tem muita dificuldade, já que o próprio Google disponibiliza um tutorial fácil de seguir para se introduzir em seu projeto em PHP.
   
-  
-  <br><br><br>
+  <br>
   ## Parte 3: Tasks Mais Complexas
+  Basicamente essa parte do projeto se junta com a primeira parte, então das 20 horas citadas na primeira parte, digamos que 10 horas são devido a esta parte.
+  <br>A maior dificuldade desta parte foi linkar o anexo de arquivos com o banco de dados, contabilizando também a quantidade deles e ligando à task. 
   
-  <br><br><br>
+  <br>
   ## Parte 4: Tasks Completas
+  Esta foi a última parte desenvolvida e também está bem envolvida com a primeira parte, pois quando completamos uma task, devemos alterar o banco de dados. 
+ <br> Não tive dificuldades com esta parte, pois quando você já está muito envolvido com o projeto, algumas alterações acabam se tornando rápida e simples.
 
-<br><br><br>
+<br>
   ## Parte 5: Suporte Robusto para Anexos + Busca
    Essa parte não foi desenvolvida devido a falta de tempo que me ocorreu.
