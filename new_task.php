@@ -1,3 +1,11 @@
+<?php
+session_start();
+$session = $_SESSION['userData'];
+
+if ($session["user"] == null)
+   header("Location: index.php");
+?>
+
 <!DOCTYPE HTML>  
 <html>
 <head>
