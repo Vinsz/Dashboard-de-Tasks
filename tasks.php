@@ -39,7 +39,13 @@
 <?php
 
 include 'db/connect.php';
+	
+session_start();
+$session = $_SESSION['userData'];
 
+if ($session["user"] == null)
+	 header("Location: index.php");
+	
 $sql = "SELECT * FROM tasks";
 $result = $conn->query($sql);
  
