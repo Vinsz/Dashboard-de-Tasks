@@ -21,7 +21,7 @@
 
 <?php
 
-include 'connect.php';
+include 'db/connect.php';
 
 $sql = "SELECT * FROM tasks WHERE id = '".$_GET["id"]."'";
 $result = $conn->query($sql);
@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
     <h2>Editar Task</h2>
 
     <p><span class="error">* required field.</span></p>
-    <form method="post" action="update.php" enctype="multipart/form-data" >
+    <form method="post" action="db/update.php" enctype="multipart/form-data" >
       <div class="form-group">
         <input type="hidden" name="id" value="<?php echo $_GET["id"]; ?>">
         <label for="exampleFormControlInput1">Nome</label> <span class="error">*</span>
@@ -72,7 +72,7 @@ if ($result->num_rows > 0) {
         if ($result->num_rows > 0) {
             while($row= $result->fetch_assoc()) {
             echo '<br>'.$row["name"].' <a href="download.php?name=' .$row["name"].'"><span class="glyphicon glyphicon-save-file"></a>
-                  <a href="delete_file.php?name='.$row["name"].'&id='.$row["id"].'&id_task='.$row["id_task"].'"><span class="glyphicon glyphicon-remove"></span></a>';
+                  <a href="db/delete_file.php?name='.$row["name"].'&id='.$row["id"].'&id_task='.$row["id_task"].'"><span class="glyphicon glyphicon-remove"></span></a>';
           }
         } else {
           echo "<br>Sem arquivos anexos.";

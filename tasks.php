@@ -38,13 +38,14 @@
 
 <?php
 
-include 'connect.php';
+include 'db/connect.php';
 
 $sql = "SELECT * FROM tasks";
 $result = $conn->query($sql);
  
 
-echo '<h1> Tasks: </h1>
+echo '<div class="container">
+	<h1> Tasks: </h1>
 	<table class="table table-striped">
 		<thead>
 			<tr>
@@ -65,10 +66,10 @@ if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		if ($row["state"] == '0') {
 			$status = "<font color='red'>Undone </font>";
-			$done = "<a href='done_task.php?id=".$row["id"]."'><span class='glyphicon glyphicon-ok'></span></a>";
+			$done = "<a href='db/done_task.php?id=".$row["id"]."'><span class='glyphicon glyphicon-ok'></span></a>";
 		} else {
 			$status = "<font color='green'>Done</font>";
-			$done = "<a href='undone_task.php?id=".$row["id"]."'><span class='glyphicon glyphicon-minus'></span></a>";
+			$done = "<a href='db/undone_task.php?id=".$row["id"]."'><span class='glyphicon glyphicon-minus'></span></a>";
 		}
 
 echo '<tbody>
@@ -80,7 +81,7 @@ echo '<tbody>
 		    <td>' . $row["user"] . '</td>
 			<td>' . $row["attach"] . '</td>
 			<td>' . $row["done"] . '</td>
-			<td><a href="delete.php?id=' . $row["id"] . '"> <span class="glyphicon glyphicon-remove"></span> </a></td>
+			<td><a href="db/delete.php?id=' . $row["id"] . '"> <span class="glyphicon glyphicon-remove"></span> </a></td>
 			<td><a href="edit.php?id=' . $row["id"] . '"> <span class="glyphicon glyphicon-edit"></span> </a></td>
 			<td>'.$done.'</td>
 		</tr>
@@ -100,7 +101,7 @@ $conn->close();
 <a href="new_task.php"> <button class="btn btn-primary">Criar Task</button></a>
 
 <br><br>
-<a href="logout.php"> <button class="btn btn-primary">Desconectar</button></a>
+<a href="loginGoogle/logout.php"> <button class="btn btn-primary">Desconectar</button></a>
 
 </body>
 </html>

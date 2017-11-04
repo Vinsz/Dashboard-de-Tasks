@@ -34,7 +34,7 @@
     <h2>Nova Task</h2>
 
     <p><span class="error">* required field.</span></p>
-    <form method="post" action="create.php" enctype="multipart/form-data" >
+    <form method="post" action="db/create.php" enctype="multipart/form-data" >
       <div class="form-group">
         <label for="exampleFormControlInput1">Nome</label> <span class="error">*</span>
         <input type="text" class="form-control" id="exampleFormControlInput1" name="name" required="true">

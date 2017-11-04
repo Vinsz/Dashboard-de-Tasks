@@ -18,8 +18,8 @@
 
 <?php
 //Include GP config file && User class
-include_once 'gpConfig.php';
-include_once 'User.php';
+include_once 'loginGoogle/gpConfig.php';
+include_once 'loginGoogle/User.php';
 
 if(isset($_GET['code'])){
     $gClient->authenticate($_GET['code']);

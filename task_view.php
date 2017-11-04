@@ -18,7 +18,7 @@
 
 <?php
 
-include 'connect.php';
+include 'db/connect.php';
 
 $sql = "SELECT * FROM tasks WHERE id = '".$_GET["id"]."'";
 
@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
 		echo '<div class="container">
 				<h2> ' . $row["name"] . '</h2>'; 
 
-		echo '<a href="delete.php?id=' . $row["id"] . '"> <span class="glyphicon glyphicon-remove"></span> </a>
+		echo '<a href="db/delete.php?id=' . $row["id"] . '"> <span class="glyphicon glyphicon-remove"></span> </a>
 		<a href="edit.php?id=' . $row["id"] . '"> <span class="glyphicon glyphicon-edit"></span> </a>';
 
 		echo '<br><label for="exampleFormControlTextarea1">Descrição: </label> ' . $row["description"] . 
