@@ -18,7 +18,7 @@
 			$sql .= "INSERT INTO attachments (id_task, name) VALUES ('".$_POST["id"]."', '".basename($_FILES['arquivos']['name'][$i])."');";
 			
 		} else {
-			echo "Erro<br />";
+			
 		}
 	}
 
