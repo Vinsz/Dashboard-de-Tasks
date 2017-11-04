@@ -24,14 +24,14 @@
   
   <br><br>
   ## Parte 3: Tasks Mais Complexas
-  <br>Basicamente essa parte do projeto se junta com a primeira parte, então das 20 horas citadas na primeira parte, digamos que 10 horas são devido a esta parte.
+  Basicamente essa parte do projeto se junta com a primeira parte, então das 20 horas citadas na primeira parte, digamos que 10 horas são devido a esta parte.
   <br>A maior dificuldade desta parte foi linkar o anexo de arquivos com o banco de dados, contabilizando também a quantidade deles e ligando à task. 
   
   <br><br>
   ## Parte 4: Tasks Completas
-  <br>Esta foi a última parte desenvolvida e também está bem envolvida com a primeira parte, pois quando completamos uma task, devemos alterar o banco de dados. 
+  Esta foi a última parte desenvolvida e também está bem envolvida com a primeira parte, pois quando completamos uma task, devemos alterar o banco de dados. 
  <br> Não tive dificuldades com esta parte, pois quando você já está muito envolvido com o projeto, algumas alterações acabam se tornando rápida e simples.
 
 <br><br>
   ## Parte 5: Suporte Robusto para Anexos + Busca
-   <br>Essa parte não foi desenvolvida devido a falta de tempo que me ocorreu.
+  Essa parte não foi desenvolvida devido a falta de tempo que me ocorreu.
